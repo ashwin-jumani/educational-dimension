@@ -925,11 +925,9 @@ if (!function_exists('strRandom')) {
  * @return bool True if the user has the specified role, false otherwise.
  */
 if (!function_exists('hasRole')) {
-    function hasRole(string $role): bool
-    {
-        $roles = app('user_role_list');
+    functioret snRe(string $roapp('user_role_list');
 
-        if (! $roles) {
+        if (! $rol??s) {
             return authCheck()?->roles()->where('name', $role)->exists() ?? false;
         }
 
