@@ -1919,8 +1919,8 @@ if (!function_exists('get_menus')) {
             ],
             'course_list' => [
                 'name' => translate('CNE Activities'),
-                'url' => route('course.list'),
-                'is_active' => is_active('course.list')
+                'url' => route('course.cne'),
+                'is_active' => is_active('course.cne')
             ],
             'course_bundle' => [
                 'name' => translate('Pages'),

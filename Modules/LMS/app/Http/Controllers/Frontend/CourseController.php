@@ -35,6 +35,28 @@ class CourseController extends Controller
 
         return view('theme::course.course-list', compact('courses'));
     }
+/**
+     * Display a cne course listing of the resource.
+     */
+    public function cneCourseList(Request $request)
+    {
+        $courses = $this->course->courseList($request);
+
+        if ($request->ajax()) {
+            $result = view('theme::course.ajax-course-list', compact('courses'))->render();
+            return response()->json(
+                [
+                    'status' => true,
+                    'data' => $result,
+                    'total' => $courses->total(),
+                    'first_item' => $courses->firstItem(),
+                    'last_item' => $courses->lastItem(),
+                ]
+            );
+        }
+
+        return view('theme::course.cne-course-list', compact('courses'));
+    }
 
     /**
      * courseDetail

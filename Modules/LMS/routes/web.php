@@ -49,6 +49,7 @@ Route::group(['middleware' => ['checkInstaller']], function () {
     Route::get('instructors', [InstructorController::class, 'index'])->name('instructor.list');
     Route::get('users/{id}/profile', [HomeController::class, 'userDetail'])->name('users.detail');
     Route::get('courses', [CourseController::class, 'courseList'])->name('course.list');
+    Route::get('cne-courses', [CourseController::class, 'cneCourseList'])->name('course.cne');
     Route::get('courses/{slug}', [CourseController::class, 'courseDetail'])->name('course.detail');
     Route::get('course-bundles', [CourseController::class, 'courseBundle'])->name('course.bundle');
 
