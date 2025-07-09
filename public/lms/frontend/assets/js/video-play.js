@@ -2,6 +2,7 @@ $(function () {
     "use strict";
     const stopVideo = document.querySelector(".demo-course-video-stop");
     const dvm = document.querySelector("#demo-video-modal");
+    const courseId = dvm.dataset.courseId;
     var player = new Plyr("#course-demo", {
         settings: ["speed"],
         seekTime: 0,
@@ -13,6 +14,7 @@ $(function () {
     });
     if (dvm) {
         dvm.addEventListener("click", (e) => {
+          // alert('inside js - Course id' + courseId);
             e.preventDefault();
             if (e.target !== this && e.target == dvm) {
                 player.stop();

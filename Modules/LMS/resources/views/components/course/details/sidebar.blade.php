@@ -7,6 +7,8 @@
 
 <div class="col-span-full lg:col-span-4">
     <div class="bg-primary-50 p-6 rounded-2xl">
+        <div class="text-heading dark:text-white text-lg font-bold mb-0.5" style="text-align:center;"> {{ translate('View Webinar') }}
+        </div>
         <div data-modal-id="demo-video-modal"
             class="flex-center relative cursor-pointer w-full aspect-video rounded-2xl overflow-hidden">
             <img data-src="{{ $thumbnail }}" alt="Course thumbnail" class="size-full object-cover">
@@ -257,6 +259,6 @@
     </div>
 </div>
 
-<!-- START DEMO VIDEO MODAL -->
+<!-- START DEMO VIDEO MODAL ASH -->
 <x-theme::course.details.demo-video :course="$course" />
 <!-- END DEMO VIDEO MODAL -->

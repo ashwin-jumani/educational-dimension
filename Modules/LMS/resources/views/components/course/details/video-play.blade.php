@@ -15,8 +15,8 @@
         <source src="{{ $shortVideo }}" type="video/mp4" />
     </video>
 @else
-    <!-- VIMEO/YOUTUBE -->
-    <div class="plyr__video-embed" id="course-demo">
+    <!-- VIMEO/YOUTUBE HERE ASH -->
+    <div class="plyr__video-embed" id="course-demo" data-course-id="{{ $course->id }}">
         <iframe src="{{ $course->demo_url }}" allowfullscreen allowtransparency allow="autoplay" data-course-id="{{ $course->id }}">></iframe>
     </div>
 @endif
@@ -29,6 +29,7 @@
         player.on('play', () => {
             console.log('Video started playing');
             console.log(`Video started playing for course ID: ${courseId}`);
+            alert('here');
             // You can trigger your custom logic here
             // Example: send AJAX request, log to analytics, etc.
         });
